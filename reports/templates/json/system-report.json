@@ -1,0 +1,133 @@
+{
+  "report": {
+    "metadata": {
+      "title": "System Status Report",
+      "version": "1.0",
+      "generator": "DebianForge",
+      "architecture": "Functional Grouping",
+      "generated_date": "{{GENERATED_DATE}}",
+      "generated_time": "{{GENERATED_TIME}}",
+      "system": "{{SYSTEM_INFO}}",
+      "report_type": "{{REPORT_TYPE}}",
+      "duration": "{{REPORT_DURATION}}"
+    },
+    "system_health_score": {
+      "score": {{SYSTEM_HEALTH_SCORE}},
+      "max_score": 100,
+      "grade": "{{SYSTEM_HEALTH_GRADE}}",
+      "interpretation": "{{SCORE_INTERPRETATION}}"
+    },
+    "system_status_summary": {
+      "healthy": {{HEALTHY_COMPONENTS}},
+      "warning": {{WARNING_COMPONENTS}},
+      "critical": {{CRITICAL_COMPONENTS}},
+      "info": {{INFO_COMPONENTS}},
+      "total": {{TOTAL_COMPONENTS}}
+    },
+    "system_components_status": [
+      {{SYSTEM_COMPONENTS_JSON}}
+    ],
+    "system_performance": {
+      "cpu": {
+        "status": "{{CPU_STATUS}}",
+        "usage": "{{CPU_USAGE}}%",
+        "load_average": "{{CPU_LOAD_AVERAGE}}",
+        "temperature": "{{CPU_TEMPERATURE}}",
+        "processes": "{{CPU_PROCESSES}}"
+      },
+      "memory": {
+        "status": "{{MEMORY_STATUS}}",
+        "total": "{{MEMORY_TOTAL}}",
+        "used": "{{MEMORY_USED}}",
+        "available": "{{MEMORY_AVAILABLE}}",
+        "usage": "{{MEMORY_USAGE}}%"
+      },
+      "disk": {
+        "status": "{{DISK_STATUS}}",
+        "total_space": "{{DISK_TOTAL}}",
+        "used_space": "{{DISK_USED}}",
+        "available_space": "{{DISK_AVAILABLE}}",
+        "usage": "{{DISK_USAGE}}%"
+      },
+      "network": {
+        "status": "{{NETWORK_STATUS}}",
+        "interfaces": "{{NETWORK_INTERFACES}}",
+        "active_connections": "{{NETWORK_CONNECTIONS}}",
+        "bandwidth_usage": "{{NETWORK_BANDWIDTH}}"
+      }
+    },
+    "system_information": {
+      "hostname": "{{HOSTNAME}}",
+      "os_version": "{{OS_VERSION}}",
+      "kernel_version": "{{KERNEL_VERSION}}",
+      "architecture": "{{ARCHITECTURE}}",
+      "uptime": "{{UPTIME}}",
+      "boot_time": "{{BOOT_TIME}}",
+      "last_update": "{{LAST_UPDATE}}"
+    },
+    "package_management": {
+      "system_updates": {
+        "status": "{{UPDATES_STATUS}}",
+        "available_updates": "{{AVAILABLE_UPDATES}}",
+        "security_updates": "{{SECURITY_UPDATES}}",
+        "last_update_check": "{{LAST_UPDATE_CHECK}}"
+      },
+      "installed_packages": {
+        "total_packages": "{{TOTAL_PACKAGES}}",
+        "security_tools": "{{SECURITY_TOOLS}}",
+        "performance_tools": "{{PERFORMANCE_TOOLS}}",
+        "system_tools": "{{SYSTEM_TOOLS}}"
+      }
+    },
+    "services_status": [
+      {{SERVICES_STATUS_JSON}}
+    ],
+    "security_status": {
+      "firewall": {
+        "status": "{{FIREWALL_STATUS}}",
+        "rules": "{{FIREWALL_RULES}}",
+        "active": "{{FIREWALL_ACTIVE}}"
+      },
+      "ssh": {
+        "status": "{{SSH_STATUS}}",
+        "port": "{{SSH_PORT}}",
+        "configuration": "{{SSH_CONFIG}}"
+      },
+      "security_tools": {
+        "fail2ban": "{{FAIL2BAN_STATUS}}",
+        "rkhunter": "{{RKHUNTER_STATUS}}",
+        "clamav": "{{CLAMAV_STATUS}}",
+        "auditd": "{{AUDITD_STATUS}}"
+      }
+    },
+    "system_trends": {
+      "resource_usage_history": "{{RESOURCE_USAGE_HISTORY}}",
+      "performance_metrics": "{{PERFORMANCE_METRICS}}"
+    },
+    "system_recommendations": [
+      {{SYSTEM_RECOMMENDATIONS_JSON}}
+    ],
+    "maintenance_tasks": {
+      "immediate_actions": [
+        {{IMMEDIATE_ACTIONS_JSON}}
+      ],
+      "scheduled_maintenance": [
+        {{SCHEDULED_MAINTENANCE_JSON}}
+      ],
+      "long_term_improvements": [
+        {{LONG_TERM_IMPROVEMENTS_JSON}}
+      ]
+    },
+    "additional_notes": "{{ADDITIONAL_NOTES}}",
+    "export_info": {
+      "format": "JSON",
+      "schema_version": "1.0",
+      "compatible_with": [
+        "API integrations",
+        "Data analysis tools",
+        "Automated processing",
+        "System monitoring tools"
+      ]
+    }
+  }
+}

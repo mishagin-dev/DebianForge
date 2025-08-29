@@ -1,0 +1,65 @@
+Report Metadata
+Field,Value
+Title,Performance Benchmark Report
+Version,1.0
+Generator,DebianForge
+Architecture,Functional Grouping
+Generated Date,{{GENERATED_DATE}}
+Generated Time,{{GENERATED_TIME}}
+System,{{SYSTEM_INFO}}
+Benchmark Type,{{BENCHMARK_TYPE}}
+Duration,{{BENCHMARK_DURATION}}
+
+Performance Score
+Score,{{PERFORMANCE_SCORE}}
+Max Score,100
+Grade,{{PERFORMANCE_GRADE}}
+Interpretation,{{SCORE_INTERPRETATION}}
+
+Benchmark Summary
+Status,Count,Description
+Completed,{{COMPLETED_BENCHMARKS}},Benchmarks that completed successfully
+Warnings,{{WARNING_BENCHMARKS}},Benchmarks with performance warnings
+Failed,{{FAILED_BENCHMARKS}},Benchmarks that failed to complete
+Info,{{INFO_BENCHMARKS}},Informational items and recommendations
+Total,{{TOTAL_BENCHMARKS}},Total number of benchmarks performed
+
+Benchmark Results
+Component,Status,Score,Details,Benchmark Tool
+{{BENCHMARK_RESULTS_CSV}}
+
+Performance Metrics
+Component,Status,Score,Details,Benchmark Tool
+CPU,{{CPU_STATUS}},{{CPU_SCORE}},{{CPU_DETAILS}},{{CPU_TOOL}}
+Memory,{{MEMORY_STATUS}},{{MEMORY_SCORE}},{{MEMORY_DETAILS}},{{MEMORY_TOOL}}
+Disk,{{DISK_STATUS}},{{DISK_SCORE}},{{DISK_DETAILS}},{{DISK_TOOL}}
+Network,{{NETWORK_STATUS}},{{NETWORK_SCORE}},{{NETWORK_DETAILS}},{{NETWORK_TOOL}}
+
+System Information
+Component,Value
+OS Version,{{OS_VERSION}}
+Kernel,{{KERNEL_VERSION}}
+Architecture,{{ARCHITECTURE}}
+CPU Cores,{{CPU_CORES}}
+Memory,{{MEMORY_SIZE}}
+Disk Type,{{DISK_TYPE}}
+Network Interface,{{NETWORK_INTERFACE}}
+
+Performance Trends
+Metric,Value,Description
+Historical Comparison,{{HISTORICAL_COMPARISON}},Comparison with previous benchmarks
+Performance Changes,{{PERFORMANCE_CHANGES}},Changes in performance metrics
+Trend Analysis,{{TREND_ANALYSIS}},Performance trend analysis
+
+Optimization Recommendations
+Priority,Category,Description,Effort,Impact
+{{OPTIMIZATION_RECOMMENDATIONS_CSV}}
+
+Tuning Suggestions
+Component,Category,Suggestion,Priority,Effort
+{{TUNING_SUGGESTIONS_CSV}}
+
+Export Information
+Format,CSV
+Schema Version,1.0
+Compatible With,Data analysis tools,Spreadsheets,Database imports,Automated processing

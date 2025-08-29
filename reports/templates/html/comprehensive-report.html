@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive System Report - DebianForge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .report-meta {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .meta-item {
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .meta-label {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        
+        .meta-value {
+            margin-top: 5px;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section-header {
+            background: #495057;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            padding: 20px;
+        }
+        
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .score-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .score-security {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .score-performance {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+        
+        .score-system {
+            background: linear-gradient(135deg, #20bf6b 0%, #0fb9b1 100%);
+        }
+        
+        .score-config {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+        }
+        
+        .score-overall {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            grid-column: span 2;
+        }
+        
+        .score-number {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        
+        .score-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .status-item {
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid;
+        }
+        
+        .status-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        
+        .status-warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        
+        .status-danger {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        
+        .status-info {
+            background: #d1ecf1;
+            border-color: #17a2b8;
+            color: #0c5460;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-success { background: #28a745; color: white; }
+        .badge-warning { background: #ffc107; color: #212529; }
+        .badge-danger { background: #dc3545; color: white; }
+        .badge-info { background: #17a2b8; color: white; }
+        
+        .recommendations {
+            background: #fff5f5;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .recommendations h3 {
+            color: #c0392b;
+            margin-bottom: 15px;
+        }
+        
+        .recommendations ul {
+            margin-left: 20px;
+        }
+        
+        .recommendations li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9em;
+            border-top: 1px solid #dee2e6;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header h1 { font-size: 2em; }
+            .meta-grid { grid-template-columns: 1fr; }
+            .status-grid { grid-template-columns: 1fr; }
+            .score-overall { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Comprehensive System Report</h1>
+            <div class="subtitle">DebianForge v1.0</div>
+        </div>
+        
+        <div class="report-meta">
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <div class="meta-label">Generated</div>
+                    <div class="meta-value">{{GENERATED_DATE}}</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">System</div>
+                    <div class="meta-value">{{SYSTEM_INFO}}</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Report Type</div>
+                    <div class="meta-value">Comprehensive System Analysis</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Duration</div>
+                    <div class="meta-value">{{REPORT_DURATION}}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">🎯 Overall System Score</div>
+            <div class="section-content">
+                <div class="score-grid">
+                    <div class="score-card score-security">
+                        <div class="score-number">{{SECURITY_SCORE}}</div>
+                        <div class="score-label">Security</div>
+                    </div>
+                    <div class="score-card score-performance">
+                        <div class="score-number">{{PERFORMANCE_SCORE}}</div>
+                        <div class="score-label">Performance</div>
+                    </div>
+                    <div class="score-card score-system">
+                        <div class="score-number">{{SYSTEM_HEALTH_SCORE}}</div>
+                        <div class="score-label">System Health</div>
+                    </div>
+                    <div class="score-card score-config">
+                        <div class="score-number">{{CONFIG_SCORE}}</div>
+                        <div class="score-label">Configuration</div>
+                    </div>
+                    <div class="score-card score-overall">
+                        <div class="score-number">{{OVERALL_SCORE}}</div>
+                        <div class="score-label">Overall Score</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">📊 Executive Summary</div>
+            <div class="section-content">
+                <p>{{EXECUTIVE_SUMMARY}}</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">🔒 Security Analysis</div>
+            <div class="section-content">
+                <h3>Security Score: {{SECURITY_SCORE}}/100</h3>
+                <div class="status-grid">
+                    <div class="status-item status-success">
+                        <strong>✅ Passed Checks:</strong> {{SECURITY_PASSED}}
+                    </div>
+                    <div class="status-item status-warning">
+                        <strong>⚠️ Warnings:</strong> {{SECURITY_WARNINGS}}
+                    </div>
+                    <div class="status-item status-danger">
+                        <strong>❌ Failed Checks:</strong> {{SECURITY_FAILED}}
+                    </div>
+                    <div class="status-item status-info">
+                        <strong>ℹ️ Info Items:</strong> {{SECURITY_INFO}}
+                    </div>
+                </div>
+                <h4>Critical Security Issues</h4>
+                <p>{{CRITICAL_SECURITY_ISSUES}}</p>
+                <h4>Security Recommendations</h4>
+                <p>{{SECURITY_RECOMMENDATIONS}}</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">⚡ Performance Analysis</div>
+            <div class="section-content">
+                <h3>Performance Score: {{PERFORMANCE_SCORE}}/100</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Status</th>
+                            <th>Score</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CPU</strong></td>
+                            <td><span class="badge badge-{{CPU_STATUS}}">{{CPU_STATUS}}</span></td>
+                            <td>{{CPU_SCORE}}/100</td>
+                            <td>{{CPU_DETAILS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Memory</strong></td>
+                            <td><span class="badge badge-{{MEMORY_STATUS}}">{{MEMORY_STATUS}}</span></td>
+                            <td>{{MEMORY_SCORE}}/100</td>
+                            <td>{{MEMORY_DETAILS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Disk</strong></td>
+                            <td><span class="badge badge-{{DISK_STATUS}}">{{DISK_STATUS}}</span></td>
+                            <td>{{DISK_SCORE}}/100</td>
+                            <td>{{DISK_DETAILS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Network</strong></td>
+                            <td><span class="badge badge-{{NETWORK_STATUS}}">{{NETWORK_STATUS}}</span></td>
+                            <td>{{NETWORK_SCORE}}/100</td>
+                            <td>{{NETWORK_DETAILS}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Performance Recommendations</h4>
+                <p>{{PERFORMANCE_RECOMMENDATIONS}}</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">🖥️ System Health Analysis</div>
+            <div class="section-content">
+                <h3>System Health Score: {{SYSTEM_HEALTH_SCORE}}/100</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Status</th>
+                            <th>Health</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Services</strong></td>
+                            <td><span class="badge badge-{{SERVICES_STATUS}}">{{SERVICES_STATUS}}</span></td>
+                            <td>{{SERVICES_HEALTH}}</td>
+                            <td>{{SERVICES_DETAILS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resources</strong></td>
+                            <td><span class="badge badge-{{RESOURCES_STATUS}}">{{RESOURCES_STATUS}}</span></td>
+                            <td>{{RESOURCES_HEALTH}}</td>
+                            <td>{{RESOURCES_DETAILS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Updates</strong></td>
+                            <td><span class="badge badge-{{UPDATES_STATUS}}">{{UPDATES_STATUS}}</span></td>
+                            <td>{{UPDATES_HEALTH}}</td>
+                            <td>{{UPDATES_DETAILS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Packages</strong></td>
+                            <td><span class="badge badge-{{PACKAGES_STATUS}}">{{PACKAGES_STATUS}}</span></td>
+                            <td>{{PACKAGES_HEALTH}}</td>
+                            <td>{{PACKAGES_DETAILS}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>System Health Recommendations</h4>
+                <p>{{SYSTEM_HEALTH_RECOMMENDATIONS}}</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">🔧 Configuration Analysis</div>
+            <div class="section-content">
+                <h3>Configuration Score: {{CONFIG_SCORE}}/100</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Area</th>
+                            <th>Status</th>
+                            <th>Issues</th>
+                            <th>Recommendations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Kernel</strong></td>
+                            <td><span class="badge badge-{{KERNEL_CONFIG_STATUS}}">{{KERNEL_CONFIG_STATUS}}</span></td>
+                            <td>{{KERNEL_ISSUES}}</td>
+                            <td>{{KERNEL_RECOMMENDATIONS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Security</strong></td>
+                            <td><span class="badge badge-{{SECURITY_CONFIG_STATUS}}">{{SECURITY_CONFIG_STATUS}}</span></td>
+                            <td>{{SECURITY_CONFIG_ISSUES}}</td>
+                            <td>{{SECURITY_CONFIG_RECOMMENDATIONS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Network</strong></td>
+                            <td><span class="badge badge-{{NETWORK_CONFIG_STATUS}}">{{NETWORK_CONFIG_STATUS}}</span></td>
+                            <td>{{NETWORK_CONFIG_ISSUES}}</td>
+                            <td>{{NETWORK_CONFIG_RECOMMENDATIONS}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Services</strong></td>
+                            <td><span class="badge badge-{{SERVICES_CONFIG_STATUS}}">{{SERVICES_CONFIG_STATUS}}</span></td>
+                            <td>{{SERVICES_CONFIG_ISSUES}}</td>
+                            <td>{{SERVICES_CONFIG_RECOMMENDATIONS}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">🚨 Risk Assessment</div>
+            <div class="section-content">
+                <h4>High Risk Issues</h4>
+                <p>{{HIGH_RISK_ISSUES}}</p>
+                <h4>Medium Risk Issues</h4>
+                <p>{{MEDIUM_RISK_ISSUES}}</p>
+                <h4>Low Risk Issues</h4>
+                <p>{{LOW_RISK_ISSUES}}</p>
+                <p><strong>Overall Risk Level:</strong> <span class="badge badge-danger">{{OVERALL_RISK_LEVEL}}</span></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">🎯 Priority Actions</div>
+            <div class="section-content">
+                <h4>Immediate Actions (Next 24 hours)</h4>
+                <p>{{IMMEDIATE_ACTIONS}}</p>
+                <h4>Short-term Actions (Next week)</h4>
+                <p>{{SHORT_TERM_ACTIONS}}</p>
+                <h4>Medium-term Actions (Next month)</h4>
+                <p>{{MEDIUM_TERM_ACTIONS}}</p>
+                <h4>Long-term Actions (Next quarter)</h4>
+                <p>{{LONG_TERM_ACTIONS}}</p>
+            </div>
+        </div>
+        
+        <div class="recommendations">
+            <h3>🚀 Key Recommendations</h3>
+            <ul>
+                {{RECOMMENDATIONS_LIST}}
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Generated by DebianForge v1.0 | Functional Grouping Architecture</p>
+            <p>For more information, visit the project documentation: <a href="../../docs/">../../docs/</a></p>
+        </div>
+    </div>
+</body>
+</html>

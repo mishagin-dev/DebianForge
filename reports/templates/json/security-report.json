@@ -1,0 +1,92 @@
+{
+  "report": {
+    "metadata": {
+      "title": "Security Audit Report",
+      "version": "2.0",
+      "generator": "DebianForge",
+      "architecture": "Functional Grouping",
+      "generated_date": "{{GENERATED_DATE}}",
+      "generated_time": "{{GENERATED_TIME}}",
+      "audit_type": "{{AUDIT_TYPE}}",
+      "duration": "{{AUDIT_DURATION}}"
+    },
+    "system_info": {
+      "system": "{{SYSTEM_INFO}}",
+      "os_version": "{{OS_VERSION}}",
+      "kernel_version": "{{KERNEL_VERSION}}",
+      "architecture": "{{ARCHITECTURE}}",
+      "uptime": "{{UPTIME}}",
+      "user_count": "{{USER_COUNT}}"
+    },
+    "security_score": {
+      "score": {{SECURITY_SCORE}},
+      "max_score": 100,
+      "grade": "{{SECURITY_GRADE}}",
+      "interpretation": "{{SCORE_INTERPRETATION}}"
+    },
+    "check_summary": {
+      "passed": {{PASSED_CHECKS}},
+      "warnings": {{WARNING_CHECKS}},
+      "failed": {{FAILED_CHECKS}},
+      "info": {{INFO_CHECKS}},
+      "total": {{TOTAL_CHECKS}}
+    },
+    "security_checks": [
+      {{SECURITY_CHECKS_JSON}}
+    ],
+    "network_security": {
+      "firewall": {
+        "status": "{{FIREWALL_STATUS}}",
+        "details": "{{FIREWALL_DETAILS}}",
+        "risk_level": "{{FIREWALL_RISK_LEVEL}}"
+      },
+      "ssh": {
+        "status": "{{SSH_STATUS}}",
+        "details": "{{SSH_DETAILS}}",
+        "risk_level": "{{SSH_RISK_LEVEL}}"
+      },
+      "network_services": {
+        "status": "{{NETWORK_STATUS}}",
+        "details": "{{NETWORK_DETAILS}}",
+        "risk_level": "{{NETWORK_RISK_LEVEL}}"
+      }
+    },
+    "risk_assessment": {
+      "high_risk": [
+        {{HIGH_RISK_ISSUES_JSON}}
+      ],
+      "medium_risk": [
+        {{MEDIUM_RISK_ISSUES_JSON}}
+      ],
+      "low_risk": [
+        {{LOW_RISK_ISSUES_JSON}}
+      ],
+      "overall_risk": "{{OVERALL_RISK_LEVEL}}"
+    },
+    "recommendations": [
+      {{RECOMMENDATIONS_JSON}}
+    ],
+    "remediation": {
+      "immediate_actions": [
+        {{IMMEDIATE_ACTIONS_JSON}}
+      ],
+      "short_term": [
+        {{SHORT_TERM_IMPROVEMENTS_JSON}}
+      ],
+      "long_term": [
+        {{LONG_TERM_ENHANCEMENTS_JSON}}
+      ]
+    },
+    "additional_notes": "{{ADDITIONAL_NOTES}}",
+    "export_info": {
+      "format": "JSON",
+      "schema_version": "1.0",
+      "compatible_with": [
+        "API integrations",
+        "Data analysis tools",
+        "Automated processing",
+        "Machine learning pipelines"
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+Report Metadata
+Field,Value
+Title,System Status Report
+Version,1.0
+Generator,DebianForge
+Architecture,Functional Grouping
+Generated Date,{{GENERATED_DATE}}
+Generated Time,{{GENERATED_TIME}}
+System,{{SYSTEM_INFO}}
+Report Type,{{REPORT_TYPE}}
+Duration,{{REPORT_DURATION}}
+
+System Health Score
+Score,{{SYSTEM_HEALTH_SCORE}}
+Max Score,100
+Grade,{{SYSTEM_HEALTH_GRADE}}
+Interpretation,{{SCORE_INTERPRETATION}}
+
+System Status Summary
+Status,Count,Description
+Healthy,{{HEALTHY_COMPONENTS}},Components operating normally
+Warning,{{WARNING_COMPONENTS}},Components needing attention
+Critical,{{CRITICAL_COMPONENTS}},Components with critical issues
+Info,{{INFO_COMPONENTS}},Informational items and status
+Total,{{TOTAL_COMPONENTS}},Total number of components checked
+
+System Components Status
+Component,Status,Health,Details
+{{SYSTEM_COMPONENTS_CSV}}
+
+System Performance
+Component,Status,Value,Details
+CPU,{{CPU_STATUS}},{{CPU_USAGE}}%,Load Average: {{CPU_LOAD_AVERAGE}}
+Memory,{{MEMORY_STATUS}},{{MEMORY_USAGE}}%,Available: {{MEMORY_AVAILABLE}}
+Disk,{{DISK_STATUS}},{{DISK_USAGE}}%,Available: {{DISK_AVAILABLE}}
+Network,{{NETWORK_STATUS}},{{NETWORK_CONNECTIONS}},Interfaces: {{NETWORK_INTERFACES}}
+
+System Information
+Component,Value
+Hostname,{{HOSTNAME}}
+OS Version,{{OS_VERSION}}
+Kernel,{{KERNEL_VERSION}}
+Architecture,{{ARCHITECTURE}}
+Uptime,{{UPTIME}}
+Boot Time,{{BOOT_TIME}}
+Last Update,{{LAST_UPDATE}}
+
+Package Management
+Category,Status,Count,Details
+System Updates,{{UPDATES_STATUS}},{{AVAILABLE_UPDATES}},Security: {{SECURITY_UPDATES}}
+Installed Packages,{{PACKAGES_STATUS}},{{TOTAL_PACKAGES}},Security Tools: {{SECURITY_TOOLS}}
+Performance Tools,{{PERFORMANCE_TOOLS_STATUS}},{{PERFORMANCE_TOOLS_COUNT}},{{PERFORMANCE_TOOLS_DETAILS}}
+System Tools,{{SYSTEM_TOOLS_STATUS}},{{SYSTEM_TOOLS_COUNT}},{{SYSTEM_TOOLS_DETAILS}}
+
+Services Status
+Service,Status,Health,Details,Priority
+{{SERVICES_STATUS_CSV}}
+
+Security Status
+Component,Status,Details,Risk Level
+Firewall,{{FIREWALL_STATUS}},{{FIREWALL_RULES}},{{FIREWALL_RISK_LEVEL}}
+SSH,{{SSH_STATUS}},{{SSH_PORT}},{{SSH_RISK_LEVEL}}
+Fail2ban,{{FAIL2BAN_STATUS}},{{FAIL2BAN_DETAILS}},{{FAIL2BAN_RISK_LEVEL}}
+RKHunter,{{RKHUNTER_STATUS}},{{RKHUNTER_DETAILS}},{{RKHUNTER_RISK_LEVEL}}
+ClamAV,{{CLAMAV_STATUS}},{{CLAMAV_DETAILS}},{{CLAMAV_RISK_LEVEL}}
+Auditd,{{AUDITD_STATUS}},{{AUDITD_DETAILS}},{{AUDITD_RISK_LEVEL}}
+
+System Trends
+Metric,Value,Description
+Resource Usage History,{{RESOURCE_USAGE_HISTORY}},Historical resource usage data
+Performance Metrics,{{PERFORMANCE_METRICS}},Performance trend analysis
+System Changes,{{SYSTEM_CHANGES}},Recent system configuration changes
+
+System Recommendations
+Priority,Category,Description,Effort,Impact
+{{SYSTEM_RECOMMENDATIONS_CSV}}
+
+Maintenance Tasks
+Timeline,Action,Description,Effort,Resources
+{{MAINTENANCE_TASKS_CSV}}
+
+Export Information
+Format,CSV
+Schema Version,1.0
+Compatible With,Data analysis tools,Spreadsheets,Database imports,System monitoring tools

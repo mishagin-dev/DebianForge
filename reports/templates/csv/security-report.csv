@@ -1,0 +1,58 @@
+Report Metadata
+Field,Value
+Title,Security Audit Report
+Version,2.0
+Generator,DebianForge
+Architecture,Functional Grouping
+Generated Date,{{GENERATED_DATE}}
+Generated Time,{{GENERATED_TIME}}
+Audit Type,{{AUDIT_TYPE}}
+Duration,{{AUDIT_DURATION}}
+
+System Information
+Field,Value
+System,{{SYSTEM_INFO}}
+OS Version,{{OS_VERSION}}
+Kernel,{{KERNEL_VERSION}}
+Architecture,{{ARCHITECTURE}}
+Uptime,{{UPTIME}}
+User Count,{{USER_COUNT}}
+
+Security Score
+Score,{{SECURITY_SCORE}}
+Max Score,100
+Grade,{{SECURITY_GRADE}}
+Interpretation,{{SCORE_INTERPRETATION}}
+
+Check Summary
+Status,Count,Description
+Passed,{{PASSED_CHECKS}},Security checks that passed successfully
+Warnings,{{WARNING_CHECKS}},Issues that need attention but are not critical
+Failed,{{FAILED_CHECKS}},Critical security issues that must be addressed
+Info,{{INFO_CHECKS}},Informational items and recommendations
+Total,{{TOTAL_CHECKS}},Total number of checks performed
+
+Security Checks
+Check,Status,Details,Risk Level,Priority
+{{SECURITY_CHECKS_CSV}}
+
+Network Security
+Component,Status,Details,Risk Level
+Firewall,{{FIREWALL_STATUS}},{{FIREWALL_DETAILS}},{{FIREWALL_RISK_LEVEL}}
+SSH,{{SSH_STATUS}},{{SSH_DETAILS}},{{SSH_RISK_LEVEL}}
+Network Services,{{NETWORK_STATUS}},{{NETWORK_DETAILS}},{{NETWORK_RISK_LEVEL}}
+
+Risk Assessment
+Risk Level,Count,Description
+High,{{HIGH_RISK_COUNT}},Critical issues requiring immediate attention
+Medium,{{MEDIUM_RISK_COUNT}},Important issues to address soon
+Low,{{LOW_RISK_COUNT}},Minor issues for future consideration
+Overall Risk,{{OVERALL_RISK_LEVEL}},Combined risk assessment
+
+Recommendations
+Priority,Category,Description,Effort,Impact
+{{RECOMMENDATIONS_CSV}}
+
+Remediation Steps
+Timeline,Action,Description,Effort,Resources
+{{REMEDIATION_CSV}}

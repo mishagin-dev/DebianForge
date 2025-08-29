@@ -1,0 +1,48 @@
+# Development workspace
+.history/
+working/
+
+# Markdown files is root directory (except README files)
+/*.md
+!README.md
+!README_ru.md
+!LICENSE
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Build artifacts
+*.o
+*.so
+*.dylib
+*.dll
+
+# IDE files
+.vscode/
+.idea/
+.cursor/
+.cursorignore
+.zed/
+.junie/
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.backup
+*~
+/reports/performance/benchmarks/*
+/reports/performance/monitoring/*
+/reports/performance/optimization/*
+/reports/security/audit-reports/*
+/reports/security/compliance/*
+/reports/security/vulnerability/*
+/reports/system/health/*
+/reports/system/packages/*
+/reports/system/updates/*

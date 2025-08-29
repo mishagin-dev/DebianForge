@@ -1,0 +1,130 @@
+{
+  "report": {
+    "metadata": {
+      "title": "Configuration Report",
+      "version": "1.0",
+      "generator": "DebianForge",
+      "architecture": "Functional Grouping",
+      "generated_date": "{{GENERATED_DATE}}",
+      "generated_time": "{{GENERATED_TIME}}",
+      "system": "{{SYSTEM_INFO}}",
+      "report_type": "{{REPORT_TYPE}}",
+      "config_version": "{{CONFIG_VERSION}}"
+    },
+    "configuration_health_score": {
+      "score": {{CONFIG_HEALTH_SCORE}},
+      "max_score": 100,
+      "grade": "{{CONFIG_HEALTH_GRADE}}",
+      "interpretation": "{{SCORE_INTERPRETATION}}"
+    },
+    "configuration_summary": {
+      "valid": {{VALID_CONFIGS}},
+      "warning": {{WARNING_CONFIGS}},
+      "invalid": {{INVALID_CONFIGS}},
+      "info": {{INFO_CONFIGS}},
+      "total": {{TOTAL_CONFIGS}}
+    },
+    "configuration_components": [
+      {{CONFIG_COMPONENTS_JSON}}
+    ],
+    "system_configuration": {
+      "kernel_parameters": {
+        "status": "{{KERNEL_CONFIG_STATUS}}",
+        "optimized_parameters": "{{KERNEL_OPTIMIZED_PARAMS}}",
+        "custom_settings": "{{KERNEL_CUSTOM_SETTINGS}}",
+        "recommendations": "{{KERNEL_RECOMMENDATIONS}}"
+      },
+      "system_limits": {
+        "status": "{{SYSTEM_LIMITS_STATUS}}",
+        "user_limits": "{{USER_LIMITS}}",
+        "system_limits": "{{SYSTEM_LIMITS}}",
+        "service_limits": "{{SERVICE_LIMITS}}"
+      },
+      "network_configuration": {
+        "status": "{{NETWORK_CONFIG_STATUS}}",
+        "tcp_settings": "{{TCP_SETTINGS}}",
+        "udp_settings": "{{UDP_SETTINGS}}",
+        "network_interfaces": "{{NETWORK_INTERFACES}}"
+      }
+    },
+    "security_configuration": {
+      "firewall": {
+        "status": "{{FIREWALL_CONFIG_STATUS}}",
+        "rules": "{{FIREWALL_RULES}}",
+        "default_policy": "{{FIREWALL_DEFAULT_POLICY}}",
+        "custom_rules": "{{FIREWALL_CUSTOM_RULES}}"
+      },
+      "ssh": {
+        "status": "{{SSH_CONFIG_STATUS}}",
+        "port": "{{SSH_PORT}}",
+        "protocol": "{{SSH_PROTOCOL}}",
+        "authentication_methods": "{{SSH_AUTH_METHODS}}",
+        "security_settings": "{{SSH_SECURITY_SETTINGS}}"
+      },
+      "security_tools": {
+        "fail2ban": "{{FAIL2BAN_CONFIG}}",
+        "rkhunter": "{{RKHUNTER_CONFIG}}",
+        "clamav": "{{CLAMAV_CONFIG}}",
+        "auditd": "{{AUDITD_CONFIG}}"
+      }
+    },
+    "package_configuration": {
+      "package_sources": {
+        "status": "{{PACKAGE_SOURCES_STATUS}}",
+        "main_repository": "{{MAIN_REPOSITORY}}",
+        "security_repository": "{{SECURITY_REPOSITORY}}",
+        "additional_repositories": "{{ADDITIONAL_REPOSITORIES}}"
+      },
+      "package_policies": {
+        "auto_updates": "{{AUTO_UPDATES}}",
+        "security_updates": "{{SECURITY_UPDATES}}",
+        "package_holds": "{{PACKAGE_HOLDS}}",
+        "unattended_upgrades": "{{UNATTENDED_UPGRADES}}"
+      }
+    },
+    "service_configuration": {
+      "system_services": "{{SYSTEM_SERVICES_CONFIG}}",
+      "application_services": "{{APPLICATION_SERVICES_CONFIG}}",
+      "custom_services": "{{CUSTOM_SERVICES_CONFIG}}"
+    },
+    "performance_configuration": {
+      "cpu": {
+        "status": "{{CPU_CONFIG_STATUS}}",
+        "governor": "{{CPU_GOVERNOR}}",
+        "frequency_scaling": "{{CPU_FREQ_SCALING}}",
+        "power_management": "{{CPU_POWER_MANAGEMENT}}"
+      },
+      "memory": {
+        "status": "{{MEMORY_CONFIG_STATUS}}",
+        "swappiness": "{{MEMORY_SWAPPINESS}}",
+        "huge_pages": "{{MEMORY_HUGE_PAGES}}",
+        "memory_management": "{{MEMORY_MANAGEMENT}}"
+      },
+      "disk": {
+        "status": "{{DISK_CONFIG_STATUS}}",
+        "io_scheduler": "{{DISK_IO_SCHEDULER}}",
+        "read_ahead": "{{DISK_READ_AHEAD}}",
+        "file_system_options": "{{DISK_FS_OPTIONS}}"
+      }
+    },
+    "configuration_recommendations": [
+      {{CONFIG_RECOMMENDATIONS_JSON}}
+    ],
+    "optimization_suggestions": {
+      "performance_optimization": "{{PERFORMANCE_OPTIMIZATION}}",
+      "security_optimization": "{{SECURITY_OPTIMIZATION}}",
+      "resource_optimization": "{{RESOURCE_OPTIMIZATION}}"
+    },
+    "additional_notes": "{{ADDITIONAL_NOTES}}",
+    "export_info": {
+      "format": "JSON",
+      "schema_version": "1.0",
+      "compatible_with": [
+        "API integrations",
+        "Data analysis tools",
+        "Automated processing",
+        "Configuration management tools"
+      ]
+    }
+  }
+}

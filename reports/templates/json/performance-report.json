@@ -1,0 +1,91 @@
+{
+  "report": {
+    "metadata": {
+      "title": "Performance Benchmark Report",
+      "version": "1.0",
+      "generator": "DebianForge",
+      "architecture": "Functional Grouping",
+      "generated_date": "{{GENERATED_DATE}}",
+      "generated_time": "{{GENERATED_TIME}}",
+      "system": "{{SYSTEM_INFO}}",
+      "benchmark_type": "{{BENCHMARK_TYPE}}",
+      "duration": "{{BENCHMARK_DURATION}}"
+    },
+    "performance_score": {
+      "score": {{PERFORMANCE_SCORE}},
+      "max_score": 100,
+      "grade": "{{PERFORMANCE_GRADE}}",
+      "interpretation": "{{SCORE_INTERPRETATION}}"
+    },
+    "benchmark_summary": {
+      "completed": {{COMPLETED_BENCHMARKS}},
+      "warnings": {{WARNING_BENCHMARKS}},
+      "failed": {{FAILED_BENCHMARKS}},
+      "info": {{INFO_BENCHMARKS}},
+      "total": {{TOTAL_BENCHMARKS}}
+    },
+    "benchmark_results": [
+      {{BENCHMARK_RESULTS_JSON}}
+    ],
+    "performance_metrics": {
+      "cpu": {
+        "status": "{{CPU_STATUS}}",
+        "score": {{CPU_SCORE}},
+        "details": "{{CPU_DETAILS}}",
+        "benchmark_tool": "{{CPU_TOOL}}"
+      },
+      "memory": {
+        "status": "{{MEMORY_STATUS}}",
+        "score": {{MEMORY_SCORE}},
+        "details": "{{MEMORY_DETAILS}}",
+        "benchmark_tool": "{{MEMORY_TOOL}}"
+      },
+      "disk": {
+        "status": "{{DISK_STATUS}}",
+        "score": {{DISK_SCORE}},
+        "details": "{{DISK_DETAILS}}",
+        "benchmark_tool": "{{DISK_TOOL}}"
+      },
+      "network": {
+        "status": "{{NETWORK_STATUS}}",
+        "score": {{NETWORK_SCORE}},
+        "details": "{{NETWORK_DETAILS}}",
+        "benchmark_tool": "{{NETWORK_TOOL}}"
+      }
+    },
+    "system_information": {
+      "os_version": "{{OS_VERSION}}",
+      "kernel_version": "{{KERNEL_VERSION}}",
+      "architecture": "{{ARCHITECTURE}}",
+      "cpu_cores": "{{CPU_CORES}}",
+      "memory_size": "{{MEMORY_SIZE}}",
+      "disk_type": "{{DISK_TYPE}}",
+      "network_interface": "{{NETWORK_INTERFACE}}"
+    },
+    "performance_trends": {
+      "historical_comparison": "{{HISTORICAL_COMPARISON}}",
+      "performance_changes": "{{PERFORMANCE_CHANGES}}",
+      "trend_analysis": "{{TREND_ANALYSIS}}"
+    },
+    "optimization_recommendations": [
+      {{OPTIMIZATION_RECOMMENDATIONS_JSON}}
+    ],
+    "tuning_suggestions": {
+      "cpu_optimization": "{{CPU_OPTIMIZATION}}",
+      "memory_optimization": "{{MEMORY_OPTIMIZATION}}",
+      "disk_optimization": "{{DISK_OPTIMIZATION}}",
+      "network_optimization": "{{NETWORK_OPTIMIZATION}}"
+    },
+    "additional_notes": "{{ADDITIONAL_NOTES}}",
+    "export_info": {
+      "format": "JSON",
+      "schema_version": "1.0",
+      "compatible_with": [
+        "API integrations",
+        "Data analysis tools",
+        "Automated processing",
+        "Performance monitoring systems"
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+Report Metadata
+Field,Value
+Title,Comprehensive System Report
+Version,1.0
+Generator,DebianForge
+Architecture,Functional Grouping
+Generated Date,{{GENERATED_DATE}}
+Generated Time,{{GENERATED_TIME}}
+System,{{SYSTEM_INFO}}
+Report Type,Comprehensive System Analysis
+Duration,{{REPORT_DURATION}}
+
+Overall System Score
+Component,Score,Grade,Status
+Security,{{SECURITY_SCORE}}/100,{{SECURITY_GRADE}},{{SECURITY_STATUS}}
+Performance,{{PERFORMANCE_SCORE}}/100,{{PERFORMANCE_GRADE}},{{PERFORMANCE_STATUS}}
+System Health,{{SYSTEM_HEALTH_SCORE}}/100,{{SYSTEM_HEALTH_GRADE}},{{SYSTEM_HEALTH_STATUS}}
+Configuration,{{CONFIG_SCORE}}/100,{{CONFIG_GRADE}},{{CONFIG_STATUS}}
+Overall,{{OVERALL_SCORE}}/100,{{OVERALL_GRADE}},{{OVERALL_STATUS}}
+
+Executive Summary
+Summary,{{EXECUTIVE_SUMMARY}}
+
+Security Analysis
+Score,{{SECURITY_SCORE}}/100
+Passed Checks,{{SECURITY_PASSED}}
+Warnings,{{SECURITY_WARNINGS}}
+Failed Checks,{{SECURITY_FAILED}}
+Info Items,{{SECURITY_INFO}}
+Critical Issues,{{CRITICAL_SECURITY_ISSUES}}
+Recommendations,{{SECURITY_RECOMMENDATIONS}}
+
+Performance Analysis
+Score,{{PERFORMANCE_SCORE}}/100
+Component,Status,Score,Details
+CPU,{{CPU_STATUS}},{{CPU_SCORE}}/100,{{CPU_DETAILS}}
+Memory,{{MEMORY_STATUS}},{{MEMORY_SCORE}}/100,{{MEMORY_DETAILS}}
+Disk,{{DISK_STATUS}},{{DISK_SCORE}}/100,{{DISK_DETAILS}}
+Network,{{NETWORK_STATUS}},{{NETWORK_SCORE}}/100,{{NETWORK_DETAILS}}
+Recommendations,{{PERFORMANCE_RECOMMENDATIONS}}
+
+System Health Analysis
+Score,{{SYSTEM_HEALTH_SCORE}}/100
+Component,Status,Health,Details
+Services,{{SERVICES_STATUS}},{{SERVICES_HEALTH}},{{SERVICES_DETAILS}}
+Resources,{{RESOURCES_STATUS}},{{RESOURCES_HEALTH}},{{RESOURCES_DETAILS}}
+Updates,{{UPDATES_STATUS}},{{UPDATES_HEALTH}},{{UPDATES_DETAILS}}
+Packages,{{PACKAGES_STATUS}},{{PACKAGES_HEALTH}},{{PACKAGES_DETAILS}}
+Recommendations,{{SYSTEM_HEALTH_RECOMMENDATIONS}}
+
+Configuration Analysis
+Score,{{CONFIG_SCORE}}/100
+Area,Status,Issues,Recommendations
+Kernel,{{KERNEL_CONFIG_STATUS}},{{KERNEL_ISSUES}},{{KERNEL_RECOMMENDATIONS}}
+Security,{{SECURITY_CONFIG_STATUS}},{{SECURITY_CONFIG_ISSUES}},{{SECURITY_CONFIG_RECOMMENDATIONS}}
+Network,{{NETWORK_CONFIG_STATUS}},{{NETWORK_CONFIG_ISSUES}},{{NETWORK_CONFIG_RECOMMENDATIONS}}
+Services,{{SERVICES_CONFIG_STATUS}},{{SERVICES_CONFIG_ISSUES}},{{SERVICES_CONFIG_RECOMMENDATIONS}}
+
+Risk Assessment
+Risk Level,Count,Description
+High,{{HIGH_RISK_COUNT}},{{HIGH_RISK_ISSUES}}
+Medium,{{MEDIUM_RISK_COUNT}},{{MEDIUM_RISK_ISSUES}}
+Low,{{LOW_RISK_COUNT}},{{LOW_RISK_ISSUES}}
+Overall Risk,{{OVERALL_RISK_LEVEL}}
+
+Priority Actions
+Timeline,Action,Description,Priority,Effort
+{{PRIORITY_ACTIONS_CSV}}
+
+Trends and Patterns
+Metric,Value,Description
+Historical Comparison,{{HISTORICAL_COMPARISON}},Comparison with previous reports
+Performance Trends,{{PERFORMANCE_TRENDS}},Performance trend analysis
+Security Trends,{{SECURITY_TRENDS}},Security trend analysis
+
+Detailed Analysis
+Category,Details
+Security Details,{{SECURITY_DETAILS}}
+Performance Details,{{PERFORMANCE_DETAILS}}
+System Details,{{SYSTEM_DETAILS}}
+Configuration Details,{{CONFIGURATION_DETAILS}}
+
+Appendices
+Appendix,Content
+Security Checklist,{{SECURITY_CHECKLIST}}
+Performance Benchmarks,{{PERFORMANCE_BENCHMARKS}}
+System Configuration,{{SYSTEM_CONFIGURATION}}
+Recommendations Matrix,{{RECOMMENDATIONS_MATRIX}}
+
+Additional Notes
+Notes,{{ADDITIONAL_NOTES}}
+
+Export Information
+Format,CSV
+Schema Version,1.0
+Report Type,Comprehensive System Analysis
+Compatible With,Data analysis tools,Spreadsheets,Database imports,Business intelligence tools,Executive dashboards

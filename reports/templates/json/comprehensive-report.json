@@ -1,0 +1,177 @@
+{
+  "report": {
+    "metadata": {
+      "title": "Comprehensive System Report",
+      "version": "1.0",
+      "generator": "DebianForge",
+      "architecture": "Functional Grouping",
+      "generated_date": "{{GENERATED_DATE}}",
+      "generated_time": "{{GENERATED_TIME}}",
+      "system": "{{SYSTEM_INFO}}",
+      "report_type": "Comprehensive System Analysis",
+      "duration": "{{REPORT_DURATION}}"
+    },
+    "overall_system_score": {
+      "security": {
+        "score": {{SECURITY_SCORE}},
+        "grade": "{{SECURITY_GRADE}}",
+        "status": "{{SECURITY_STATUS}}"
+      },
+      "performance": {
+        "score": {{PERFORMANCE_SCORE}},
+        "grade": "{{PERFORMANCE_GRADE}}",
+        "status": "{{PERFORMANCE_STATUS}}"
+      },
+      "system_health": {
+        "score": {{SYSTEM_HEALTH_SCORE}},
+        "grade": "{{SYSTEM_HEALTH_GRADE}}",
+        "status": "{{SYSTEM_HEALTH_STATUS}}"
+      },
+      "configuration": {
+        "score": {{CONFIG_SCORE}},
+        "grade": "{{CONFIG_GRADE}}",
+        "status": "{{CONFIG_STATUS}}"
+      },
+      "overall": {
+        "score": {{OVERALL_SCORE}},
+        "grade": "{{OVERALL_GRADE}}",
+        "status": "{{OVERALL_STATUS}}"
+      }
+    },
+    "executive_summary": "{{EXECUTIVE_SUMMARY}}",
+    "security_analysis": {
+      "score": {{SECURITY_SCORE}},
+      "passed_checks": {{SECURITY_PASSED}},
+      "warnings": {{SECURITY_WARNINGS}},
+      "failed_checks": {{SECURITY_FAILED}},
+      "info_items": {{SECURITY_INFO}},
+      "critical_issues": "{{CRITICAL_SECURITY_ISSUES}}",
+      "recommendations": "{{SECURITY_RECOMMENDATIONS}}"
+    },
+    "performance_analysis": {
+      "score": {{PERFORMANCE_SCORE}},
+      "components": {
+        "cpu": {
+          "status": "{{CPU_STATUS}}",
+          "score": {{CPU_SCORE}},
+          "details": "{{CPU_DETAILS}}"
+        },
+        "memory": {
+          "status": "{{MEMORY_STATUS}}",
+          "score": {{MEMORY_SCORE}},
+          "details": "{{MEMORY_DETAILS}}"
+        },
+        "disk": {
+          "status": "{{DISK_STATUS}}",
+          "score": {{DISK_SCORE}},
+          "details": "{{DISK_DETAILS}}"
+        },
+        "network": {
+          "status": "{{NETWORK_STATUS}}",
+          "score": {{NETWORK_SCORE}},
+          "details": "{{NETWORK_DETAILS}}"
+        }
+      },
+      "recommendations": "{{PERFORMANCE_RECOMMENDATIONS}}"
+    },
+    "system_health_analysis": {
+      "score": {{SYSTEM_HEALTH_SCORE}},
+      "components": {
+        "services": {
+          "status": "{{SERVICES_STATUS}}",
+          "health": "{{SERVICES_HEALTH}}",
+          "details": "{{SERVICES_DETAILS}}"
+        },
+        "resources": {
+          "status": "{{RESOURCES_STATUS}}",
+          "health": "{{RESOURCES_HEALTH}}",
+          "details": "{{RESOURCES_DETAILS}}"
+        },
+        "updates": {
+          "status": "{{UPDATES_STATUS}}",
+          "health": "{{UPDATES_HEALTH}}",
+          "details": "{{UPDATES_DETAILS}}"
+        },
+        "packages": {
+          "status": "{{PACKAGES_STATUS}}",
+          "health": "{{PACKAGES_HEALTH}}",
+          "details": "{{PACKAGES_DETAILS}}"
+        }
+      },
+      "recommendations": "{{SYSTEM_HEALTH_RECOMMENDATIONS}}"
+    },
+    "configuration_analysis": {
+      "score": {{CONFIG_SCORE}},
+      "areas": {
+        "kernel": {
+          "status": "{{KERNEL_CONFIG_STATUS}}",
+          "issues": "{{KERNEL_ISSUES}}",
+          "recommendations": "{{KERNEL_RECOMMENDATIONS}}"
+        },
+        "security": {
+          "status": "{{SECURITY_CONFIG_STATUS}}",
+          "issues": "{{SECURITY_CONFIG_ISSUES}}",
+          "recommendations": "{{SECURITY_CONFIG_RECOMMENDATIONS}}"
+        },
+        "network": {
+          "status": "{{NETWORK_CONFIG_STATUS}}",
+          "issues": "{{NETWORK_CONFIG_ISSUES}}",
+          "recommendations": "{{NETWORK_CONFIG_RECOMMENDATIONS}}"
+        },
+        "services": {
+          "status": "{{SERVICES_CONFIG_STATUS}}",
+          "issues": "{{SERVICES_CONFIG_ISSUES}}",
+          "recommendations": "{{SERVICES_CONFIG_RECOMMENDATIONS}}"
+        }
+      }
+    },
+    "risk_assessment": {
+      "high_risk": {
+        "count": {{HIGH_RISK_COUNT}},
+        "issues": "{{HIGH_RISK_ISSUES}}"
+      },
+      "medium_risk": {
+        "count": {{MEDIUM_RISK_COUNT}},
+        "issues": "{{MEDIUM_RISK_ISSUES}}"
+      },
+      "low_risk": {
+        "count": {{LOW_RISK_COUNT}},
+        "issues": "{{LOW_RISK_ISSUES}}"
+      },
+      "overall_risk": "{{OVERALL_RISK_LEVEL}}"
+    },
+    "priority_actions": [
+      {{PRIORITY_ACTIONS_JSON}}
+    ],
+    "trends_and_patterns": {
+      "historical_comparison": "{{HISTORICAL_COMPARISON}}",
+      "performance_trends": "{{PERFORMANCE_TRENDS}}",
+      "security_trends": "{{SECURITY_TRENDS}}"
+    },
+    "detailed_analysis": {
+      "security_details": "{{SECURITY_DETAILS}}",
+      "performance_details": "{{PERFORMANCE_DETAILS}}",
+      "system_details": "{{SYSTEM_DETAILS}}",
+      "configuration_details": "{{CONFIGURATION_DETAILS}}"
+    },
+    "appendices": {
+      "security_checklist": "{{SECURITY_CHECKLIST}}",
+      "performance_benchmarks": "{{PERFORMANCE_BENCHMARKS}}",
+      "system_configuration": "{{SYSTEM_CONFIGURATION}}",
+      "recommendations_matrix": "{{RECOMMENDATIONS_MATRIX}}"
+    },
+    "additional_notes": "{{ADDITIONAL_NOTES}}",
+    "export_info": {
+      "format": "JSON",
+      "schema_version": "1.0",
+      "report_type": "Comprehensive System Analysis",
+      "compatible_with": [
+        "API integrations",
+        "Data analysis tools",
+        "Automated processing",
+        "Business intelligence tools",
+        "Executive dashboards"
+      ]
+    }
+  }
+}

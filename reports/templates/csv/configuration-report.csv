@@ -1,0 +1,74 @@
+Report Metadata
+Field,Value
+Title,Configuration Report
+Version,1.0
+Generator,DebianForge
+Architecture,Functional Grouping
+Generated Date,{{GENERATED_DATE}}
+Generated Time,{{GENERATED_TIME}}
+System,{{SYSTEM_INFO}}
+Report Type,{{REPORT_TYPE}}
+Config Version,{{CONFIG_VERSION}}
+
+Configuration Health Score
+Score,{{CONFIG_HEALTH_SCORE}}
+Max Score,100
+Grade,{{CONFIG_HEALTH_GRADE}}
+Interpretation,{{SCORE_INTERPRETATION}}
+
+Configuration Summary
+Status,Count,Description
+Valid,{{VALID_CONFIGS}},Configurations that are valid and optimal
+Warning,{{WARNING_CONFIGS}},Configurations that need attention
+Invalid,{{INVALID_CONFIGS}},Configurations with errors or issues
+Info,{{INFO_CONFIGS}},Informational items and recommendations
+Total,{{TOTAL_CONFIGS}},Total number of configurations checked
+
+Configuration Components
+Component,Status,Health,Details
+{{CONFIG_COMPONENTS_CSV}}
+
+System Configuration
+Component,Status,Details,Recommendations
+Kernel Parameters,{{KERNEL_CONFIG_STATUS}},{{KERNEL_OPTIMIZED_PARAMS}},{{KERNEL_RECOMMENDATIONS}}
+System Limits,{{SYSTEM_LIMITS_STATUS}},{{SYSTEM_LIMITS}},{{SYSTEM_LIMITS_RECOMMENDATIONS}}
+Network Configuration,{{NETWORK_CONFIG_STATUS}},{{TCP_SETTINGS}},{{NETWORK_RECOMMENDATIONS}}
+
+Security Configuration
+Component,Status,Details,Risk Level
+Firewall,{{FIREWALL_CONFIG_STATUS}},{{FIREWALL_RULES}},{{FIREWALL_RISK_LEVEL}}
+SSH,{{SSH_CONFIG_STATUS}},{{SSH_PORT}},{{SSH_RISK_LEVEL}}
+Fail2ban,{{FAIL2BAN_STATUS}},{{FAIL2BAN_CONFIG}},{{FAIL2BAN_RISK_LEVEL}}
+RKHunter,{{RKHUNTER_STATUS}},{{RKHUNTER_CONFIG}},{{RKHUNTER_RISK_LEVEL}}
+ClamAV,{{CLAMAV_STATUS}},{{CLAMAV_CONFIG}},{{CLAMAV_RISK_LEVEL}}
+Auditd,{{AUDITD_STATUS}},{{AUDITD_CONFIG}},{{AUDITD_RISK_LEVEL}}
+
+Package Configuration
+Category,Status,Details,Recommendations
+Package Sources,{{PACKAGE_SOURCES_STATUS}},{{MAIN_REPOSITORY}},{{PACKAGE_SOURCES_RECOMMENDATIONS}}
+Package Policies,{{PACKAGE_POLICIES_STATUS}},{{AUTO_UPDATES}},{{PACKAGE_POLICIES_RECOMMENDATIONS}}
+
+Service Configuration
+Service Type,Status,Configuration,Health
+System Services,{{SYSTEM_SERVICES_STATUS}},{{SYSTEM_SERVICES_CONFIG}},{{SYSTEM_SERVICES_HEALTH}}
+Application Services,{{APPLICATION_SERVICES_STATUS}},{{APPLICATION_SERVICES_CONFIG}},{{APPLICATION_SERVICES_HEALTH}}
+Custom Services,{{CUSTOM_SERVICES_STATUS}},{{CUSTOM_SERVICES_CONFIG}},{{CUSTOM_SERVICES_HEALTH}}
+
+Performance Configuration
+Component,Status,Details,Recommendations
+CPU,{{CPU_CONFIG_STATUS}},{{CPU_GOVERNOR}},{{CPU_OPTIMIZATION}}
+Memory,{{MEMORY_CONFIG_STATUS}},{{MEMORY_SWAPPINESS}},{{MEMORY_OPTIMIZATION}}
+Disk,{{DISK_CONFIG_STATUS}},{{DISK_IO_SCHEDULER}},{{DISK_OPTIMIZATION}}
+
+Configuration Recommendations
+Priority,Category,Description,Effort,Impact
+{{CONFIG_RECOMMENDATIONS_CSV}}
+
+Optimization Suggestions
+Component,Category,Suggestion,Priority,Effort
+{{OPTIMIZATION_SUGGESTIONS_CSV}}
+
+Export Information
+Format,CSV
+Schema Version,1.0
+Compatible With,Data analysis tools,Spreadsheets,Database imports,Configuration management tools
