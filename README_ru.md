@@ -55,16 +55,15 @@ sudo ./main.sh system update
 
 ## 📚 Документация
 
-- **📖 [Wiki](WIKI_ru.md)** - Полная документация, руководства и учебники
-- **🔧 [Конфигурация](WIKI_ru.md#конфигурация)** - Настройка и кастомизация
-- **📊 [Отчетность](WIKI_ru.md#отчетность)** - Генерация отчетов и форматы
-- **🛠️ [Разработка](WIKI_ru.md#разработка)** - Вклад в проект и расширение
+- **📖 [Wiki](https://github.com/mishagin-dev/DebianForge/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)** - Полная документация, руководства и учебники
+- **🔧 [Конфигурация](https://github.com/mishagin-dev/DebianForge/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9#-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F)** - Настройка и кастомизация
+- **📊 [Отчетность](https://github.com/mishagin-dev/DebianForge/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9#-%D0%BE%D1%82%D1%87%D0%B5%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C)** - Генерация отчетов и форматы
+- **🛠️ [Разработка](https://github.com/mishagin-dev/DebianForge/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9#%EF%B8%8F-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0)** - Вклад в проект и расширение
 
 ## 🤝 Поддержка
 
 - **Issues**: [GitHub Issues](https://github.com/mishagin-dev/DebianForge/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/mishagin-dev/DebianForge/discussions)
-- **Wiki**: [Project Wiki](WIKI_ru.md)
+- **Wiki**: [Project Wiki](https://github.com/mishagin-dev/DebianForge/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
 
 ## 📄 Лицензия
 
