@@ -55,16 +55,15 @@ sudo ./main.sh system update
 
 ## 📚 Documentation
 
-- **📖 [Wiki](WIKI.md)** - Complete documentation, guides, and tutorials
-- **🔧 [Configuration](WIKI.md#configuration)** - Setup and customization
-- **📊 [Reporting](WIKI.md#reporting)** - Report generation and formats
-- **🛠️ [Development](WIKI.md#development)** - Contributing and extending
+- **📖 [Wiki](https://github.com/mishagin-dev/DebianForge/wiki/English)** - Complete documentation, guides, and tutorials
+- **🔧 [Configuration](https://github.com/mishagin-dev/DebianForge/wiki/English#-configuration)** - Setup and customization
+- **📊 [Reporting](https://github.com/mishagin-dev/DebianForge/wiki/English#-reporting)** - Report generation and formats
+- **🛠️ [Development](https://github.com/mishagin-dev/DebianForge/wiki/English#%EF%B8%8F-development)** - Contributing and extending
 
 ## 🤝 Support
 
 - **Issues**: [GitHub Issues](https://github.com/mishagin-dev/DebianForge/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/mishagin-dev/DebianForge/discussions)
-- **Wiki**: [Project Wiki](WIKI.md)
+- **Wiki**: [Project Wiki](https://github.com/mishagin-dev/DebianForge/wiki/English)
 
 ## 📄 License
 
